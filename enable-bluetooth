@@ -1,0 +1,7 @@
+#!/bin/bash
+# enable blouetooth in pop os src: https://askubuntu.com/questions/1403817/i-cant-turn-on-bluetooth-in-ubuntu-22-04-lts
+sudo rfkill unblock all 
+sudo hciconfig hci0 down
+sudo rmmod btusb
+sudo modprobe btusb
+sudo hciconfig hci0 up
